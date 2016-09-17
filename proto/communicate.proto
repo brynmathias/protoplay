@@ -1,0 +1,22 @@
+syntax = 'proto3';
+
+import "proto/base.proto";
+
+package communicate;
+
+enum MessageType {
+    STATEMENT = 0;
+    REMINDER = 1;
+    FINALREMINDER = 2;
+    PASSWORDRESET = 3;
+    SIGNUP = 4;
+}
+
+message Communication {
+    MessageType message_type = 1;
+    repeated base.Job job = 2;
+    base.Logging logging = 3;
+    string organization =4;
+    string account_number = 5;
+    base.ENVRIONMENT env = 6;
+}

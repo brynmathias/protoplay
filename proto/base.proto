@@ -1,0 +1,23 @@
+syntax = 'proto3';
+
+package base;
+
+message Job {
+    string type = 1;
+    string errors = 2;
+    int64 job_id = 3;
+    bool comleted =4;
+}
+
+enum ENVRIONMENT {
+    PRODUCTION = 0;
+    DEVELOPMENT = 1;
+    STAGEING = 2;
+}
+
+message Logging {
+
+    string date = 1;
+    string sender = 2;
+    string other_stuff = 3;
+}
